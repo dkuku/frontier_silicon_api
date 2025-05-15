@@ -7,18 +7,24 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## For development mode:
 
-For development mode:
 make sure your app is available from the outside world
 it may require to change the config/dev.exs `http: [ip: {0, 0, 0, 0}, port: 4000]`
 then redirect the port 80 to 4000 in your os:
 under linux
 
-sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 4000
-sudo iptables -t nat -A OUTPUT -p tcp -d localhost --dport 80 -j REDIRECT --to-port 4000
+    sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 4000
+    sudo iptables -t nat -A OUTPUT -p tcp -d localhost --dport 80 -j REDIRECT --to-port 4000
 
 to list your rules
-sudo iptables -t nat -L
+
+    sudo iptables -t nat -L
+
 then add a dns redirect in your dns provider
-I'm using openwrt that uses adguard home
+I'm using openwrt that uses adguard home as dns provider
+
+## Similar projects:
+[Radio-API in php](https://github.com/KIMB-technologies/Radio-API)
+[librefrontier in go](https://github.com/compujuckel/librefrontier)
+
