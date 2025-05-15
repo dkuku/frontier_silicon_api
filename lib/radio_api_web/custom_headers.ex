@@ -1,4 +1,5 @@
 defmodule RadioApiWeb.Plugs.CustomHeaders do
+  @moduledoc false
   import Plug.Conn
 
   def init(opts), do: opts

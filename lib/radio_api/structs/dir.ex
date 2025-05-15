@@ -1,7 +1,8 @@
 defmodule RadioApi.Dir do
-  defstruct [:title, :path]
-
+  @moduledoc false
   require EEx
+
+  defstruct [:title, :path]
 
   EEx.function_from_string(
     :def,

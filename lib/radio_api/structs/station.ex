@@ -1,4 +1,7 @@
 defmodule RadioApi.Station do
+  @moduledoc false
+  require EEx
+
   defstruct [
     :id,
     :name,
@@ -7,8 +10,6 @@ defmodule RadioApi.Station do
     :desc,
     :category
   ]
-
-  require EEx
 
   EEx.function_from_string(
     :def,
@@ -33,13 +34,5 @@ defmodule RadioApi.Station do
 end
 
 defimpl XML, for: RadioApi.Station do
-  def encode(station),
-    do:
-      RadioApi.Station.to_xml(
-        station.id,
-        station.name,
-        station.url,
-        station.logo_url,
-        station.desc
-      )
+  def encode(station), do: RadioApi.Station.to_xml(station.id, station.name, station.url, station.logo_url, station.desc)
 end

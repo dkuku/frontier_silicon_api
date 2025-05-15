@@ -3,8 +3,7 @@ defmodule RadioApiWeb.RadioController do
 
   def login(conn, %{"token" => "0"}) do
     # when token is "0" the client is unauthenticated
-    conn
-    |> send_resp(200, "<EncryptedToken>3a3f5ac48a1dab4e</EncryptedToken>")
+    send_resp(conn, 200, "<EncryptedToken>3a3f5ac48a1dab4e</EncryptedToken>")
   end
 
   def login(conn, %{"mac" => mac}) do
@@ -13,34 +12,29 @@ defmodule RadioApiWeb.RadioController do
     items = items()
     response = XML.encode(items)
 
-    conn
-    |> send_resp(200, response)
+    send_resp(conn, 200, response)
   end
 
   def search(conn, params) do
     items =
-      stations()
-      |> Enum.filter(fn s -> s.id == params["Search"] end)
+      Enum.filter(stations(), fn s -> s.id == params["Search"] end)
 
     response = XML.encode(%RadioApi.List{items: items, next_url: nil})
 
-    conn
-    |> send_resp(200, response)
+    send_resp(conn, 200, response)
   end
 
   def stations(conn, params) do
     response =
       XML.encode(%RadioApi.List{items: stations(), next_url: nil})
 
-    conn
-    |> send_resp(200, response)
+    send_resp(conn, 200, response)
   end
 
   def podcasts(conn, params) do
     response = XML.encode(%RadioApi.List{items: [], next_url: nil})
 
-    conn
-    |> send_resp(200, response)
+    send_resp(conn, 200, response)
   end
 
   def radio_browser(conn, params) do
@@ -50,8 +44,7 @@ defmodule RadioApiWeb.RadioController do
   def any(conn, params) do
     IO.inspect(params, label: :any)
 
-    conn
-    |> send_resp(200, inspect(params))
+    send_resp(conn, 200, inspect(params))
   end
 
   def items do

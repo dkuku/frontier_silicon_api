@@ -1,7 +1,8 @@
 defmodule RadioApi.List do
-  defstruct [:items, :previous_url, :next_url]
-
+  @moduledoc false
   require EEx
+
+  defstruct [:items, :previous_url, :next_url]
 
   EEx.function_from_string(
     :def,
