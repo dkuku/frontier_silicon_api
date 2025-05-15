@@ -4,7 +4,6 @@ defmodule RadioApiWeb.RadioController do
   def login(conn, %{"token" => "0"}) do
     # when token is "0" the client is unauthenticated
     conn
-    |> put_resp_content_type("application/xml")
     |> send_resp(200, "<EncryptedToken>3a3f5ac48a1dab4e</EncryptedToken>")
   end
 
@@ -15,59 +14,32 @@ defmodule RadioApiWeb.RadioController do
     response = XML.encode(items)
 
     conn
-    |> put_resp_content_type("application/xml")
     |> send_resp(200, response)
   end
 
-  def list(conn, params) do
-    IO.inspect(params, label: :list)
-  end
-
   def search(conn, params) do
-    IO.inspect(params, label: :search)
-    stations(conn, params)
-
-    previous_url =
-      "/setupapp/aldi/asp/BrowseXML/loginXML.asp?gofile=&amp;mac=866dbc881b137a0b360928117c37ff9f&amp;dlang=eng&amp;fver=6&amp;ven=targa4"
-
     items =
       stations()
       |> Enum.filter(fn s -> s.id == params["Search"] end)
 
-    response = XML.encode(%RadioApi.List{items: items, previous_url: previous_url, next_url: nil})
-    IO.puts(response)
+    response = XML.encode(%RadioApi.List{items: items, next_url: nil})
 
     conn
-    |> put_resp_content_type("application/xml")
     |> send_resp(200, response)
   end
 
   def stations(conn, params) do
-    IO.inspect(params, label: :stations)
-
-    previous_url =
-      "/setupapp/aldi/asp/BrowseXML/loginXML.asp?gofile=&amp;mac=866dbc881b137a0b360928117c37ff9f&amp;dlang=eng&amp;fver=6&amp;ven=targa4"
-
     response =
-      XML.encode(%RadioApi.List{items: stations(), previous_url: previous_url, next_url: nil})
-
-    IO.puts(response)
+      XML.encode(%RadioApi.List{items: stations(), next_url: nil})
 
     conn
-    |> put_resp_content_type("application/xml")
     |> send_resp(200, response)
   end
 
   def podcasts(conn, params) do
-    IO.inspect(params, label: :podcast)
-
-    previous_url =
-      "/setupapp/aldi/asp/BrowseXML/loginXML.asp?gofile=&amp;mac=866dbc881b137a0b360928117c37ff9f&amp;dlang=eng&amp;fver=6&amp;ven=targa4"
-
-    response = XML.encode(%RadioApi.List{items: [], previous_url: previous_url, next_url: nil})
+    response = XML.encode(%RadioApi.List{items: [], next_url: nil})
 
     conn
-    |> put_resp_content_type("application/xml")
     |> send_resp(200, response)
   end
 

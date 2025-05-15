@@ -10,13 +10,6 @@ defmodule RadioApi.List do
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <ListOfItems>
       <ItemCount><%= length(items) %></ItemCount>
-      <%= if previous_url do %>
-      <Item>
-        <ItemType>Previous</ItemType>
-    <UrlPrevious><%= url <> previous_url %></UrlPrevious>
-    <UrlPreviousBackUp><%= url <> previous_url %></UrlPreviousBackUp>
-      </Item>
-      <% end %>
       <%= for item <- items do XML.encode(item) end %>
       <%= if next_url do %>
       <Item>

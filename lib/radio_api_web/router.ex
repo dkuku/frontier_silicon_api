@@ -16,6 +16,7 @@ defmodule RadioApiWeb.Router do
 
   pipeline :xml do
     plug :accepts, ["xml"]
+    plug RadioApiWeb.Plugs.CustomHeaders
   end
 
   scope "/", RadioApiWeb do
