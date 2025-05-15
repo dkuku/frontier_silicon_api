@@ -14,10 +14,27 @@ defmodule RadioApiWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :xml do
+    plug :accepts, ["xml"]
+  end
+
   scope "/", RadioApiWeb do
     pipe_through :browser
 
     get "/", PageController, :home
+  end
+
+  scope "/", RadioApiWeb do
+    pipe_through :xml
+
+    # Login endpoint
+    get "/setupapp/:model/asp/BrowseXML/loginXML.asp", RadioController, :login
+    get "/setupapp/:model/asp/BrowseXML/Search.asp", RadioController, :search
+    get "/podcasts", RadioController, :podcasts
+    get "/stations", RadioController, :stations
+    get "/radio-browser", RadioController, :radio_browser
+    get "/vtuner/play/station=:station", RadioController, :any
+    get "/*path", RadioController, :any
   end
 
   # Other scopes may use custom stacks.

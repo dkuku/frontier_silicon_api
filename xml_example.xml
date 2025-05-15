@@ -1,0 +1,307 @@
+ 2025-05-14 21:16:37 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>4</ItemCount>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Podcast</Title>
+<UrlDir>http://192.168.1.106/list?tid=3</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/list?tid=3</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Radio stations</Title>
+<UrlDir>http://192.168.1.106/list?tid=1</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/list?tid=1</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Radio-Browser</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=none&term=none</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=none&term=none</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>GUI-Code: ZNciM</Title>
+<UrlDir>http://192.168.1.106/?go=initial</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/?go=initial</UrlDirBackUp>
+   </Item>
+ </ListOfItems>
+ 192.168.1.158 - - [14/May/2025:21:16:37 +0000] "GET /setupapp/aldi/asp/BrowseXML/loginXML.asp?gofile=&mac=866dbc881b137a0b360928117c37ff9f&dlang=eng&fver=6&ven=targa4 HTTP/1.1" 200 948 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:16:43 +0000 "GET /index.php" 200
+ 2025-05-14 21:16:43 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>0</ItemCount>
+   <Item>
+<ItemType>Previous</ItemType>
+<UrlPrevious>http://192.168.1.106/?go=initial</UrlPrevious>
+<UrlPreviousBackUp>http://192.168.1.106/?go=initial</UrlPreviousBackUp>
+   </Item>
+ </ListOfItems>
+ 192.168.1.158 - - [14/May/2025:21:16:43 +0000] "GET /list?tid=3&startItems=1&endItems=100&mac=866dbc881b137a0b360928117c37ff9f&dlang=eng&fver=6&ven=targa4 HTTP/1.1" 200 304 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:16:47 +0000 "GET /index.php" 200
+ 2025-05-14 21:16:47 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>1</ItemCount>
+   <Item>
+<ItemType>Previous</ItemType>
+<UrlPrevious>http://192.168.1.106/?go=initial</UrlPrevious>
+<UrlPreviousBackUp>http://192.168.1.106/?go=initial</UrlPreviousBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Nachrichten</Title>
+<UrlDir>http://192.168.1.106/list?tid=1&cat=Nachrichten</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/list?tid=1&cat=Nachrichten</UrlDirBackUp>
+   </Item>
+ </ListOfItems>
+ 192.168.1.158 - - [14/May/2025:21:16:47 +0000] "GET /list?tid=1&startItems=1&endItems=100&mac=866dbc881b137a0b360928117c37ff9f&dlang=eng&fver=6&ven=targa4 HTTP/1.1" 200 533 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:16:49 +0000 "GET /index.php" 200
+ 2025-05-14 21:16:49 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>1</ItemCount>
+   <Item>
+<ItemType>Previous</ItemType>
+<UrlPrevious>http://192.168.1.106/list?tid=1</UrlPrevious>
+<UrlPreviousBackUp>http://192.168.1.106/list?tid=1</UrlPreviousBackUp>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>1000</StationId>
+<StationName>NDR Info</StationName>
+   </Item>
+ </ListOfItems>
+ 192.168.1.158 - - [14/May/2025:21:16:49 +0000] "GET /list?tid=1&cat=Nachrichten&startItems=1&endItems=100&mac=866dbc881b137a0b360928117c37ff9f&dlang=eng&fver=6&ven=targa4 HTTP/1.1" 200 426 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:16:53 +0000 "GET /index.php" 200
+ 192.168.1.158 - - [14/May/2025:21:16:53 +0000] "GET /setupapp/aldi/asp/BrowseXML/loginXML.asp?token=0 HTTP/1.1" 200 49 "-" "FSL IR/0.1"
+ 192.168.1.158 - - [14/May/2025:21:16:53 +0000] "GET /setupapp/aldi/asp/BrowseXML/Search.asp?sSearchtype=3&Search=1000&mac=866dbc881b137a0b360928117c37ff9f&dlang=eng&fver=6&ven=targa4 HTTP/1.1" 200 828 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:16:53 +0000 "GET /index.php" 200
+ 2025-05-14 21:16:53 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>1</ItemCount>
+   <Item>
+<ItemType>Previous</ItemType>
+<UrlPrevious>http://192.168.1.106/list?tid=1&cat=Nachrichten</UrlPrevious>
+<UrlPreviousBackUp>http://192.168.1.106/list?tid=1&cat=Nachrichten</UrlPreviousBackUp>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>1000</StationId>
+<StationName>NDR Info</StationName>
+<StationUrl>http://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo_sh.m3u</StationUrl>
+<StationDesc>News</StationDesc>
+<Logo>http://192.168.1.106/media/default.png</Logo>
+<StationFormat>Radio</StationFormat>
+<StationLocation>Earth</StationLocation>
+<StationBandWidth>32</StationBandWidth>
+<StationMime>MP3</StationMime>
+<Relia>5</Relia>
+   </Item>
+ </ListOfItems>
+
+ 192.168.1.158 - - [14/May/2025:21:17:14 +0000] "GET /radio-browser?by=none&term=none&startItems=1&endItems=100&mac=866dbc881b137a0b360928117c37ff9f&dlang=eng&fver=6&ven=targa4 HTTP/1.1" 200 1752 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:17:17 +0000 "GET /index.php" 200
+ 2025-05-14 21:17:17 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>51</ItemCount>
+   <Item>
+<ItemType>Previous</ItemType>
+<UrlPrevious>http://192.168.1.106/radio-browser?by=none&term=none</UrlPrevious>
+<UrlPreviousBackUp>http://192.168.1.106/radio-browser?by=none&term=none</UrlPreviousBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>AD - Andorra</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=countries&term=Andorra</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=countries&term=Andorra</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>AE - The United Arab Emirates</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=countries&term=The%20United%20Arab%20Emirates</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=countries&term=The%20United%20Arab%20Emirates</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>AF - Afghanistan</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=countries&term=Afghanistan</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=countries&term=Afghanistan</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>AG - Antigua And Barbuda</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=countries&term=Antigua%20And%20Barbuda</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=countries&term=Antigua%20And%20Barbuda</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>AI - Anguilla</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=countries&term=Anguilla</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=countries&term=Anguilla</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>AL - Albania</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=countries&term=Albania</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=countries&term=Albania</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>punjabi</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=languages&term=punjabi</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=languages&term=punjabi</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>korean</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=languages&term=korean</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=languages&term=korean</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Next Page</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=languages&term=none&offset=50</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=languages&term=none&offset=50</UrlDirBackUp>
+   </Item>
+ </ListOfItems>
+ 192.168.1.158 - - [14/May/2025:21:17:20 +0000] "GET /radio-browser?by=languages&term=none&startItems=1&endItems=100&mac=866dbc881b137a0b360928117c37ff9f&dlang=eng&fver=6&ven=targa4 HTTP/1.1" 200 13769 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:17:23 +0000 "GET /index.php" 200
+ 192.168.1.158 - - [14/May/2025:21:17:23 +0000] "GET /setupapp/aldi/asp/BrowseXML/loginXML.asp?token=0 HTTP/1.1" 200 49 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:17:23 +0000 "GET /index.php" 200
+ 2025-05-14 21:17:23 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>4</ItemCount>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Podcast</Title>
+<UrlDir>http://192.168.1.106/list?tid=3</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/list?tid=3</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Radio stations</Title>
+<UrlDir>http://192.168.1.106/list?tid=1</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/list?tid=1</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Radio-Browser</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=none&term=none</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=none&term=none</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>GUI-Code: ZNciM</Title>
+<UrlDir>http://192.168.1.106/?go=initial</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/?go=initial</UrlDirBackUp>
+   </Item>
+ </ListOfItems>
+ 192.168.1.158 - - [14/May/2025:21:17:23 +0000] "GET /setupapp/aldi/asp/BrowseXML/loginXML.asp?gofile=&mac=866dbc881b137a0b360928117c37ff9f&dlang=eng&fver=6&ven=targa4 HTTP/1.1" 200 948 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:17:26 +0000 "GET /index.php" 200
+ 2025-05-14 21:17:26 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>4</ItemCount>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Podcast</Title>
+<UrlDir>http://192.168.1.106/list?tid=3</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/list?tid=3</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Radio stations</Title>
+<UrlDir>http://192.168.1.106/list?tid=1</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/list?tid=1</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Radio-Browser</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=none&term=none</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=none&term=none</UrlDirBackUp>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>GUI-Code: ZNciM</Title>
+<UrlDir>http://192.168.1.106/?go=initial</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/?go=initial</UrlDirBackUp>
+   </Item>
+ </ListOfItems>
+| 2025-05-14 21:34:36 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>51</ItemCount>
+   <Item>
+<ItemType>Previous</ItemType>
+<UrlPrevious>http://192.168.1.106/radio-browser?by=languages&term=none</UrlPrevious>
+<UrlPreviousBackUp>http://192.168.1.106/radio-browser?by=languages&term=none</UrlPreviousBackUp>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>399b7c2a668011e8b15b52543be04c81</StationId>
+<StationName>RMF FM</StationName>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>59e30dda64bf11eabe6352543be04c81</StationId>
+<StationName>Radio Zet</StationName>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>d377fdb9913647dea1f46b02a1bc7f72</StationId>
+<StationName>Radio 357</StationName>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>0013eb822dea41f79534936d0b2721b7</StationId>
+<StationName>TokFM</StationName>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>9617d67b060111e8ae9752543be04c81</StationId>
+<StationName>Antyradio</StationName>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>d81fd5d34c24476888b357954e77c0e7</StationId>
+<StationName>Radio Nowy Świat</StationName>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>64e5a5d18b04419cb35028f056818282</StationId>
+<StationName>ESKA POZNAŃ </StationName>
+   </Item>
+   <Item>
+<ItemType>Dir</ItemType>
+<Title>Next Page</Title>
+<UrlDir>http://192.168.1.106/radio-browser?by=languages&term=polish&offset=50</UrlDir>
+<UrlDirBackUp>http://192.168.1.106/radio-browser?by=languages&term=polish&offset=50</UrlDirBackUp>
+   </Item>
+ </ListOfItems>
+ 127.0.0.1 -  14/May/2025:21:34:52 +0000 "GET /index.php" 200
+ 192.168.1.158 - - [14/May/2025:21:34:52 +0000] "GET /setupapp/aldi/asp/BrowseXML/loginXML.asp?token=0 HTTP/1.1" 200 49 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:34:52 +0000 "GET /index.php" 200
+ 2025-05-14 21:34:52 - Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <ListOfItems>
+   <ItemCount>1</ItemCount>
+   <Item>
+<ItemType>Previous</ItemType>
+<UrlPrevious>http://192.168.1.106/radio-browser?by=languages&term=polish</UrlPrevious>
+<UrlPreviousBackUp>http://192.168.1.106/radio-browser?by=languages&term=polish</UrlPreviousBackUp>
+   </Item>
+   <Item>
+<ItemType>Station</ItemType>
+<StationId>9617d67b060111e8ae9752543be04c81</StationId>
+<StationName>Antyradio</StationName>
+<StationUrl>http://n-4-2.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx?audio=5</StationUrl>
+<StationDesc>metal,rock - Poland</StationDesc>
+<Logo>http://192.168.1.106/image.php?hash=2affbecf43466b4e42f3f6efc68e2bcbdcfcfc2a</Logo>
+<StationFormat>Radio</StationFormat>
+<StationLocation>Earth</StationLocation>
+<StationBandWidth>32</StationBandWidth>
+<StationMime>MP3</StationMime>
+<Relia>5</Relia>
+   </Item>
+ </ListOfItems>
+ 192.168.1.158 - - [14/May/2025:21:34:52 +0000] "GET /setupapp/aldi/asp/BrowseXML/Search.asp?sSearchtype=3&Search=9617d67b060111e8ae9752543be04c81&mac=866dbc881b137a0b360928117c37ff9f&dlang=eng&fver=6&ven=targa4 HTTP/1.1" 200 940 "-" "FSL IR/0.1"
+ 127.0.0.1 -  14/May/2025:21:34:54 +0000 "GET /image.php" 200
+ 192.168.1.173 - - [14/May/2025:21:34:54 +0000] "GET /image.php?hash=2affbecf43466b4e42f3f6efc68e2bcbdcfcfc2a HTTP/1.1" 200 5646 "-" "Dalvik/2.1.0 (Linux; U; Android 15; 24122RKC7G Build/AQ3A.240829.003)"
+
+
