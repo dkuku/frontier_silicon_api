@@ -16,8 +16,8 @@ defmodule RadioApi.List do
       <Item>
         <ItemType>Dir</ItemType>
         <Title>Next</Title>
-    <UrlDir><%= url <> next_url %></UrlDir>
-    <UrlDirBackUp><%= url <> next_url %></UrlDirBackUp>
+        <UrlDir><%= url <> next_url %></UrlDir>
+        <UrlDirBackUp><%= url <> next_url %></UrlDirBackUp>
       </Item>
       <% end %>
     </ListOfItems>

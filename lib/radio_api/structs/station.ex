@@ -1,14 +1,12 @@
 defmodule RadioApi.Station do
-  @moduledoc false
+  @moduledoc """
+  used to display the station on the list of stations
+  """
   require EEx
 
   defstruct [
     :id,
-    :name,
-    :url,
-    :logo_url,
-    :desc,
-    :category
+    :name
   ]
 
   EEx.function_from_string(
@@ -19,20 +17,21 @@ defmodule RadioApi.Station do
      <ItemType>Station</ItemType>
      <StationId><%= id %></StationId>
      <StationName><%= name %></StationName>
-     <StationUrl><%= url %></StationUrl>
-     <StationDesc><%= desc %></StationDesc>
-     <Logo><%= logo_url %></Logo>
-     <StationFormat>Radio</StationFormat>
-     <StationLocation>Earth</StationLocation>
-     <StationBandWidth>32</StationBandWidth>
-     <StationMime>MP3</StationMime>
-     <Relia>5</Relia>
     </Item>
     """,
-    [:id, :name, :url, :logo_url, :desc]
+    [:id, :name]
   )
+
+  def parse(%{"stationuuid" => uuid, "name" => name}) do
+    IO.inspect({name, uuid})
+
+    %RadioApi.Station{
+      id: RadioApi.Helpers.UUID.strip_dashes(uuid),
+      name: name
+    }
+  end
 end
 
 defimpl XML, for: RadioApi.Station do
-  def encode(station), do: RadioApi.Station.to_xml(station.id, station.name, station.url, station.logo_url, station.desc)
+  def encode(station), do: RadioApi.Station.to_xml(station.id, station.name)
 end
