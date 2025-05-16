@@ -32,6 +32,7 @@ defmodule RadioApi.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:radio_browser, path: "../radio_browser"},
       {:phoenix, "~> 1.7.21"},
       {:phoenix_ecto, "~> 4.5"},
       {:ecto_sql, "~> 3.10"},

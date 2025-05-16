@@ -15,18 +15,38 @@ defmodule RadioApiWeb.RadioController do
     send_resp(conn, 200, response)
   end
 
-  def search(conn, params) do
-    items =
-      Enum.filter(stations(), fn s -> s.id == params["Search"] end)
+  def search(conn, %{"Search" => uuid} = params) do
+    IO.inspect(params)
 
-    response = XML.encode(%RadioApi.List{items: items, next_url: nil})
+    uuid
+    |> RadioApi.Helpers.UUID.insert_dashes()
+    |> RadioBrowser.play()
+    |> case do
+      [] ->
+        IO.inspect(uuid, label: :empty)
+        empty_response(conn)
 
-    send_resp(conn, 200, response)
+      [station] ->
+        response =
+          station
+          |> RadioApi.StationFull.parse()
+          |> XML.encode()
+
+        send_resp(conn, 200, response)
+    end
   end
 
   def stations(conn, params) do
+    IO.inspect(params, label: :stations)
+
+    stations =
+      "PL"
+      |> RadioBrowser.search_by_countrycode(limit: 50, offset: 0, order: :name)
+      |> elem(1)
+      |> Enum.map(&RadioApi.Station.parse/1)
+
     response =
-      XML.encode(%RadioApi.List{items: stations(), next_url: nil})
+      XML.encode(%RadioApi.List{items: stations, next_url: nil})
 
     send_resp(conn, 200, response)
   end
@@ -70,22 +90,10 @@ defmodule RadioApiWeb.RadioController do
     %RadioApi.List{items: items}
   end
 
-  def stations do
-    [
-      %RadioApi.Station{
-        id: "1",
-        name: "NDR Info",
-        url: "http://www.ndr.de/resources/metadaten/audio/m3u/ndrinfo_sh.m3u",
-        logo_url: "http://192.168.1.106/images/radio.jpg",
-        desc: "News"
-      },
-      %RadioApi.Station{
-        id: "9617d67b060111e8ae9752543be04c81",
-        name: "Antyradio",
-        url: "http://n-4-2.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx?audio=5",
-        desc: "metal,rock - Poland",
-        logo_url: "http://192.168.1.106/images/radio.jpg"
-      }
-    ]
+  def empty_response(conn) do
+    response =
+      XML.encode(%RadioApi.List{items: [], next_url: nil})
+
+    send_resp(conn, 200, response)
   end
 end
