@@ -41,8 +41,7 @@ defmodule RadioApiWeb.RadioController do
 
     stations =
       "PL"
-      |> RadioBrowser.search_by_countrycode(limit: 50, offset: 0, order: :name)
-      |> elem(1)
+      |> RadioBrowser.search_by_countrycode()
       |> Enum.map(&RadioApi.Station.parse/1)
 
     response =
