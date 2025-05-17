@@ -22,9 +22,7 @@ defmodule RadioApi.Station do
     [:id, :name]
   )
 
-  def parse(%{"stationuuid" => uuid, "name" => name}) do
-    IO.inspect({name, uuid})
-
+  def parse(%{stationuuid: uuid, name: name}) do
     %RadioApi.Station{
       id: RadioApi.Helpers.UUID.strip_dashes(uuid),
       name: name

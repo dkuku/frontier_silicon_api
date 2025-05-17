@@ -43,14 +43,14 @@ defmodule RadioApi.StationFull do
   )
 
   def parse(%{
-        "stationuuid" => id,
-        "name" => name,
-        "url" => url,
-        "favicon" => logo_url,
-        "homepage" => desc,
-        "country" => country,
-        "bitrate" => bitrate,
-        "codec" => codec
+        stationuuid: id,
+        name: name,
+        url: url,
+        favicon: logo_url,
+        homepage: desc,
+        country: country,
+        bitrate: bitrate,
+        codec: codec
       }) do
     %RadioApi.StationFull{
       id: id,

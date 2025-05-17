@@ -20,6 +20,7 @@ defmodule RadioApiWeb.ConnCase do
   using do
     quote do
       use RadioApiWeb, :verified_routes
+
       import Phoenix.ConnTest
       import Plug.Conn
       import RadioApiWeb.ConnCase

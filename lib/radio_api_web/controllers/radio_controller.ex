@@ -37,8 +37,6 @@ defmodule RadioApiWeb.RadioController do
   end
 
   def stations(conn, params) do
-    IO.inspect(params, label: :stations)
-
     stations =
       "PL"
       |> RadioBrowser.search_by_countrycode()
